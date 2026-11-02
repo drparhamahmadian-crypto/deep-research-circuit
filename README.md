@@ -1,6 +1,6 @@
 # Deep Research Circuit
 
-Deep Research Circuit is a local research workflow for gathering evidence, recording claims and obtaining independent review. It combines subject-specific guidance, an offline claim/source consistency checker, and an optional Codex hook guard. It originated as the local Parham Deep Research 0.2.0 candidate and has been renamed for this release candidate.
+Deep Research Circuit is a local research workflow for gathering evidence, recording claims and obtaining independent review. It combines subject-specific guidance, an offline claim/source consistency checker, and an optional Codex hook guard. It originated as the local research-workflow prototype, version 0.2.0, and has been renamed for this release candidate.
 
 **Prototype · Apache-2.0 · Python standard library.** The offline test suite and synthetic examples are reproducible without model calls or external services.
 

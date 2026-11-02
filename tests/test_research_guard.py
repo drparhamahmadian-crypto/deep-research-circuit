@@ -45,7 +45,7 @@ class ResearchGuardTests(unittest.TestCase):
 
     def test_unrelated_and_quoted_mentions_do_not_activate(self):
         for prompt in ['Research flights', 'Review this $deep-research-circuit plugin', '> $deep-research-circuit',
-                       '$parham-deep-research', 'Use Parham Deep Research']:
+                       '$legacy-deep-research', 'Use Legacy Deep Research']:
             self.assertEqual(self.hook('UserPromptSubmit', prompt=prompt), {})
         self.assertEqual(self.tool('ordinary'), {})
         self.assertFalse((self.root / 'data').exists())
