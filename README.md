@@ -1,39 +1,46 @@
 # Deep Research Circuit
 
-Deep Research Circuit is a local research workflow for gathering evidence, recording claims and obtaining independent review. It combines subject-specific guidance, an offline claim/source consistency checker, and an optional Codex hook guard. It originated as the local research-workflow prototype, version 0.2.0, and has been renamed for this release candidate.
+Deep Research Circuit is an adaptive research workflow for open questions and detailed evidence work. It helps an agent decide what to investigate next, follow promising leads and build an answer whose claims can be checked against saved sources.
 
-**Prototype · Apache-2.0 · Python standard library.** The offline test suite and synthetic examples are reproducible without model calls or external services.
+Its original contribution brings research control and evidence review into the same process. The question can evolve as the investigation develops, while the sources, claims and reviewed draft stay connected.
 
 ![Architecture](docs/architecture/architecture.svg)
 
-[Interactive architecture figure](docs/architecture/index.html) · [Source map](docs/architecture/architecture.md) · [Verification receipt](verification.json)
+[Explore the circuit](docs/architecture/index.html) · [Development results](docs/development-evaluation.md) · [Source map](docs/architecture/architecture.md)
 
-## What it does
+## Why this design matters
 
-- The explicitly invoked skill guides framing, source discovery, document recovery, subject-specific checks and independent review. Start at [SKILL.md](skills/deep-research-circuit/SKILL.md).
-- The Python standard-library [validator](skills/deep-research-circuit/scripts/validate_claims.py) checks that a marked report, evidence records, hashes, quoted text and a recorded review agree.
-- The optional [guard](skills/deep-research-circuit/references/automatic-guard.md) can count covered tool calls and run a final record check on supported Codex hook callbacks. It is not a sandbox or a universal output filter.
+A citation can point to the right source while the report or evidence has changed since review. Deep Research Circuit binds the draft, captured artifacts, claim manifest and separate review with SHA-256 hashes. Changed material cannot reuse an older clearance. The checker connects the review to the version that reaches the reader.
 
-## Where it helps
+Research also needs room to follow a useful discovery. The workflow records promising leads, their next checks and their eventual disposition. Its optional controller accounts for covered research calls and bounded extensions without resetting earlier usage. An allowance becomes a point to reassess the enquiry rather than a reason to lose an unresolved lead.
 
-The same evidence workflow supports different kinds of enquiry, with methods selected for the question:
+The final check brings those records together before rendering the report. A separate reviewer examines meaning, competing explanations and omissions; the code checks that the reviewed material and delivered material agree.
 
-- **Scientific and technical reviews:** trace findings to original papers, data, documentation and code; preserve uncertainty and contrary evidence.
-- **Software and developer tools:** compare repositories, versions, capabilities and compatibility against actual requirements.
-- **Legal and policy research:** check status, applicability and competing interpretations using the relevant jurisdiction's primary sources.
-- **Business and quantitative analysis:** distinguish reported results from forecasts and assumptions; preserve calculations and their inputs.
-- **Practical decisions:** compare products, travel options and property using current offers and authoritative records for the actual location.
-- **History and mixed questions:** track source dependence, distinguish observation from inference, and follow decisive gaps across disciplines.
+The [design comparison](docs/design-comparison.md) explains the failure cases these checks address and the implementation differences found in a pinned research-pipeline source review.
 
-The workflow is international: source selection follows the country and jurisdiction of the enquiry. Domain guidance is research support, with its verification limits described below.
+## Focused effort, flexible depth
 
-## Evidence boundaries
+Start with a loose question, a comparison or one precise claim. The workflow chooses methods for that enquiry and identifies the evidence that could change the answer. It directs agents to reuse applicable material, avoid repeated failed searches, and add specialist work when a distinct check needs it.
 
-The validator **does not establish truth, source authenticity, quotation meaning, completeness or genuine reviewer independence**. A pass only checks the supplied records and recorded review. A human or suitably independent reviewer must inspect the report and evidence. The guard covers only callbacks delivered by the host and cannot retract generated text. Comparative research quality, speed, hallucination reduction and live host compatibility are unmeasured. See [claim-validation.md](skills/deep-research-circuit/references/claim-validation.md) for the record schema and limits.
+For a broad question, that means preserving scope while following worthwhile discoveries. For evidence digging, it means recovering the decisive passage, recording its location and testing what it supports. The same process can move between discovery and close examination as the question demands.
 
-## Try the synthetic example
+## Tested through development
 
-Requires Python 3.9 or later and no external packages or network. Python 3.9 itself has not been tested. From the package directory:
+The published package has a reproducible suite of 59 offline tests covering evidence bindings, review invalidation, guard state and lead accounting.
+
+An earlier live development enquiry linked 49 claims to 62 source artifacts. Two separate agent reviewers recorded 45 supported claims and four appropriately qualified claims. Their work corrected source bindings, scope, an unsupported inference, a calculation/date issue and missing alternatives. Targeted challenge checks rejected six modified cases and accepted the intact control.
+
+The [development evaluation](docs/development-evaluation.md) explains the cases, versions and recorded outcomes. The [verification receipt](verification.json) records the current package checks.
+
+## Across subjects and countries
+
+The included procedures cover scientific evidence, software and developer tools, legal and policy questions, business results, quantitative checks, history, and practical comparisons such as products or travel. Source selection follows the actual country, jurisdiction and question.
+
+Read the [research skill](skills/deep-research-circuit/SKILL.md) for the procedure and its subject guides.
+
+## Try it
+
+The checker uses Python's standard library. From the repository directory:
 
 ```sh
 python3 skills/deep-research-circuit/scripts/validate_claims.py check examples/synthetic/claims.json --review examples/synthetic/review.synthetic.json
@@ -41,20 +48,18 @@ python3 skills/deep-research-circuit/scripts/validate_claims.py render examples/
 python3 -m unittest discover -s tests
 ```
 
-The example's source and review are fabricated; its review is a test record, not an independent assessment. Never use it to clear a real report. Tests run the guard as a subprocess with temporary local state; they do not register hooks, invoke providers or demonstrate activation in a live host.
+The example uses fictional evidence and a synthetic review record. It demonstrates the file format and check/render process. The recorded package run passed 59 tests on Python 3.15.2.
 
-The recorded local suite passed 59 tests on Python 3.15.2. A [proposed CI workflow](docs/ci/offline-checks.yml) is included for Python 3.9 and 3.15, but is not active: the publishing authorisation does not have GitHub's workflow scope. No hosted CI result is claimed.
+## Optional completion control
 
-## Optional hooks
+The default plugin manifest provides the skill and helpers. To use Codex hooks, review [automatic-guard.md](skills/deep-research-circuit/references/automatic-guard.md) and the separate [hook manifest example](plugin.with-hooks.example.json). The host's installation and trust process controls activation.
 
-The default [plugin.json](plugin.json) does **not** register hooks. The included [plugin.with-hooks.example.json](plugin.with-hooks.example.json) shows the additional hook declaration. Enabling it requires deliberately replacing the default manifest with that example before following the host's current plugin installation, permission and trust process. Do this only in an appropriate isolated test session after reviewing the scripts and host documentation. Installation or a manifest alone does not establish that callbacks fire. No installation or hook registration was performed for this candidate.
+An active guard recognises a prompt beginning with `$deep-research-circuit`, `Use Deep Research Circuit` or `Run Deep Research Circuit`. Use `/drc end` to end an active guard. It retains research files under `<cwd>/research-workspaces/` and state under the host's `PLUGIN_DATA`; use a separate study directory.
 
-When hooks are loaded and trusted, the guard recognises a human prompt beginning with `$deep-research-circuit`, `Use Deep Research Circuit` or `Run Deep Research Circuit`. A human can end an active guard with `/drc end`; this does not mean the report passed. The guard has host and interception limits described in [automatic-guard.md](skills/deep-research-circuit/references/automatic-guard.md). The renamed version has only been exercised by offline simulated hook payloads, not by a live Codex session.
+The [validation notes](docs/validation-notes.md) describe the checker contract, host coverage and current test scope. A [proposed CI workflow](docs/ci/offline-checks.yml) is included for future activation.
 
-An active guard saves research evidence and work products beneath `<cwd>/research-workspaces/` and retains them after the run ends. Its SQLite state is stored under the host-provided `PLUGIN_DATA`. Choose an appropriate separate study directory and handle retained research files accordingly; the package directory and its descendants are rejected as study roots.
+## Licence and provenance
 
-## Provenance and release review
+Deep Research Circuit is an independently developed, AI-assisted project licensed under [Apache-2.0](LICENSE). [PROVENANCE.md](PROVENANCE.md) records its source snapshot and credited method adaptations. [NOTICE](NOTICE) retains project and source attribution. The bundled Chakra Petch font retains its OFL 1.1 licence.
 
-See [PROVENANCE.md](PROVENANCE.md) and [source-sha256.txt](source-sha256.txt) for the source snapshot, changes and attribution.
-
-Licensed under [Apache-2.0](LICENSE). Method adaptations are credited in their reference files and [NOTICE](NOTICE); fonts retain the licences included with their assets. This is an independent project, with no endorsement implied by a cited platform or method.
+Version 0.2.0 is the first public prototype.

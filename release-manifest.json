@@ -14,15 +14,15 @@
     },
     {
       "path": "NOTICE",
-      "sha256": "16f7c9164856e3e33607a08c71db69942f5a42855732d29e3b33d81060427ce4"
+      "sha256": "f16598b3e8c8a762d88b0eeec8f96c6396d42f5c5178a5d869c85e6ad87ee842"
     },
     {
       "path": "PROVENANCE.md",
-      "sha256": "390399b288d526a855bd93ce2b69769eb8e1a0bba83b4218f403501f055b9bb6"
+      "sha256": "57d97fd817504dd17b3516467e1ea165cf13f80a40049ccc549b1905d393ad07"
     },
     {
       "path": "README.md",
-      "sha256": "09a1ddda290208ad679a91e9913c42a6ec765153a1d9cdd133275e0393efe7f0"
+      "sha256": "121d6274d74043edb5c8e88f681ec4c93b9093646ea93b499fa28f0508772ead"
     },
     {
       "path": "docs/architecture/architecture.md",
@@ -34,7 +34,7 @@
     },
     {
       "path": "docs/architecture/architecture.svg",
-      "sha256": "381423f32fa55fe58252615a83bed7b4ce82e2e638935cb834ab1141dd8e0d12"
+      "sha256": "fa2e27e6a7d1ac697eb9d0656ee38f0376695f11bd326da2f59605bf3090fe72"
     },
     {
       "path": "docs/architecture/assets/fonts/ChakraPetch-SemiBold-Latin.woff2",
@@ -50,11 +50,23 @@
     },
     {
       "path": "docs/architecture/index.html",
-      "sha256": "26e9d8333c1ac92f9bb10a3996af240c10933cc22f05d6b44cbc7f6da1c09060"
+      "sha256": "37eb5c8f4cdafcde7e59bfec46e26c7a284039ee360598d49d52d63fef39de7f"
     },
     {
       "path": "docs/ci/offline-checks.yml",
       "sha256": "32703d19bdd678b856a19c173938218a35bc71c1e60f9d49a36e3f993679546d"
+    },
+    {
+      "path": "docs/design-comparison.md",
+      "sha256": "a8ff3b3b0d78dd207bcfbf87725ca93cbb97fb86be96a2bc554b6e9a360d8b1c"
+    },
+    {
+      "path": "docs/development-evaluation.md",
+      "sha256": "e5c43e521b1bcf0cb0e3d443c7f1fa506616ca4e8628b28173e2eb56637ef65e"
+    },
+    {
+      "path": "docs/validation-notes.md",
+      "sha256": "1820f270a0b2cfadc805d9340be423fe8cc068437adf30362d94a00e72264e6d"
     },
     {
       "path": "examples/synthetic/catalog-capture.txt",
@@ -182,7 +194,7 @@
     },
     {
       "path": "source-sha256.txt",
-      "sha256": "d418ed06fef61af26be13e67fdc1f9c043af83438a8f4c9c4ee7ac54199b5975"
+      "sha256": "9ea41ccc488ce81bde224d81328807e2c68c58af139625b0736fedee13ded723"
     },
     {
       "path": "tests/fixtures/catalog-capture.txt",
@@ -202,7 +214,7 @@
     },
     {
       "path": "tests/test_research_guard.py",
-      "sha256": "a674e22bc9a1347786a68822ce03334a8117a74439e841878913aa24343d257f"
+      "sha256": "b18734f4ff73039f618d83daf2b0b2326a61cbbde2c994719c1f64bbb5aa3c19"
     },
     {
       "path": "tests/test_search_extensions.py",

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Deep Research Circuit — architecture</title>
+  <title>Deep Research Circuit: adaptive research with traceable evidence</title>
   <!-- Chakra Petch: Copyright 2018 The Chakra Petch Project Authors; SIL OFL 1.1. Full licence and source in brand-guidelines.md. -->
   <style>
     @font-face { font-family:"Chakra Petch"; font-style:normal; font-weight:600; font-display:swap; src:url(assets/fonts/ChakraPetch-SemiBold-Latin.woff2) format("woff2"); }
@@ -64,9 +64,9 @@
 </head>
 <body>
   <main class="page">
-    <header><div><h1>Deep Research Circuit</h1><p class="tagline">Deep research with traceable evidence.</p></div><p class="intro">Science · Software · Policy · Business · Practical decisions. Sources and jurisdiction follow the question.</p></header>
+    <header><div><h1>Deep Research Circuit</h1><p class="tagline">Deep research with traceable evidence.</p></div><p class="intro">An original research workflow for open questions and precise evidence work. Keep useful leads in view and bind the final report to the exact material that passed review.</p></header>
     <section aria-labelledby="diagram-heading">
-      <div class="figure-head"><h2 id="diagram-heading">Architecture</h2><p>Seven steps · follow the trace or change the evidence</p></div>
+      <div class="figure-head"><h2 id="diagram-heading">How the research comes together</h2><p>Follow the trace or change the evidence</p></div>
       <div class="explainer" id="explainer">
         <div class="diagram">
           <div class="diagram-scroll" tabindex="0" aria-label="Architecture diagram; scroll horizontally on narrow screens. Use Left and Right arrow keys to change steps.">
@@ -106,7 +106,7 @@
               <path id="edge-hook-check" class="route optional" d="M292 496 H760 V378 H850"/>
               <circle class="junction" cx="745" cy="346" r="5"/><circle class="junction" cx="987" cy="402" r="5"/>
 
-              <g id="node-scope" class="node"><path class="shape" d="M70 77 H278 L292 91 V143 L278 156 H70 L55 143 V91 Z"/><text class="label" x="76" y="100">INSTRUCTION-LED</text><text class="title" x="76" y="128">Question + scope</text></g>
+              <g id="node-scope" class="node"><path class="shape" d="M70 77 H278 L292 91 V143 L278 156 H70 L55 143 V91 Z"/><text class="label" x="76" y="100">RESEARCH DIRECTION</text><text class="title" x="76" y="128">Question + scope</text></g>
               <g id="node-retrieve" class="node"><path class="shape" d="M55 193 H292 V273 H55 Z"/><path class="accent" d="M75 253 H135"/><text class="label" x="75" y="217">AVAILABLE TOOLS</text><text class="title" x="75" y="244">Targeted retrieval</text></g>
               <g id="node-artifact" class="node"><path class="shape" d="M55 314 H266 L292 340 V421 H55 Z"/><path d="M266 314 V340 H292" fill="none" stroke="#83d5f4" stroke-width="1.5"/><text class="label" x="75" y="341">SAVED SOURCE</text><text class="title" x="75" y="369">Text artifact</text><text class="detail" x="75" y="398">Locator · time · status · hash</text></g>
               <g id="node-hook" class="node optional"><path class="shape" d="M55 460 H292 V528 H55 Z"/><text class="label" x="74" y="485">OPTIONAL HOST HOOK</text><text class="file-small" x="74" y="510">hooks/guard.py</text></g>
@@ -114,35 +114,35 @@
               <g id="node-report" class="node"><path class="shape" d="M437 70 H703 V120 H437 Z"/><text class="label" x="454" y="89">MARKED DRAFT</text><text class="file-small" x="454" y="109">report.md</text></g>
               <g id="node-ledger" class="node"><rect class="ledger-shape" x="395" y="146" width="350" height="276" rx="15"/><path d="M421 225 H719 M421 290 H719 M421 355 H719" stroke="#41677b" stroke-width="1"/><text class="label" x="421" y="176">CLAIM LEDGER</text><text class="file" x="421" y="205">claims.json</text><text class="code" x="421" y="255">claim ID ↔ marked text</text><text class="code" x="421" y="320">source ID · locator · quote</text><text class="code" x="421" y="386">SHA-256 · report + artifact</text></g>
 
-              <g id="node-review" class="node"><path class="shape" d="M850 120 H1108 L1122 134 V225 L1108 239 H850 Z"/><circle cx="874" cy="146" r="7" fill="none" stroke="#83d5f4" stroke-width="2"/><text class="label" x="893" y="150">SEMANTIC JUDGMENT</text><text class="title" x="870" y="185">Separate reviewer</text><text class="detail" x="870" y="212">Full draft + original sources</text><text class="file-small" x="870" y="231">review.json</text></g>
-              <g id="node-check" class="node"><path class="shape" d="M850 290 H1122 V402 H850 Z"/><path d="M870 312 H924" class="accent"/><text class="label" x="870" y="331">LOCAL CONSISTENCY GATE</text><text class="file-small" x="870" y="359">validate_claims.py</text><text class="detail" x="870" y="384">check → render</text></g>
-              <g id="node-reader" class="node"><path class="shape" d="M850 458 H1122 V528 H850 Z"/><circle cx="876" cy="491" r="7" fill="#63dfcf"/><text class="title" x="895" y="493">Reader report</text><text class="tiny" x="895" y="514">Markers removed · limits visible</text></g>
+              <g id="node-review" class="node"><path class="shape" d="M850 120 H1108 L1122 134 V225 L1108 239 H850 Z"/><circle cx="874" cy="146" r="7" fill="none" stroke="#83d5f4" stroke-width="2"/><text class="label" x="893" y="150">CONTENT REVIEW</text><text class="title" x="870" y="185">Separate reviewer</text><text class="detail" x="870" y="212">Full draft + original sources</text><text class="file-small" x="870" y="231">review.json</text></g>
+              <g id="node-check" class="node"><path class="shape" d="M850 290 H1122 V402 H850 Z"/><path d="M870 312 H924" class="accent"/><text class="label" x="870" y="331">EVIDENCE + REVIEW CHECK</text><text class="file-small" x="870" y="359">validate_claims.py</text><text class="detail" x="870" y="384">check → render</text></g>
+              <g id="node-reader" class="node"><path class="shape" d="M850 458 H1122 V528 H850 Z"/><circle cx="876" cy="491" r="7" fill="#63dfcf"/><text class="title" x="895" y="493">Reader report</text><text class="tiny" x="895" y="514">Evidence trail preserved</text></g>
             </svg>
           </div>
           <div class="diagram-key"><span><i class="line-key"></i> Recorded path</span><span><i class="line-key optional"></i> Optional host hook</span><span><i class="line-key active"></i> Active or changed dependency</span></div>
         </div>
         <div class="inspector" id="stage" aria-live="polite" aria-atomic="true">
           <div id="stage-count" class="step-count">Step 1 / 7</div><div id="stage-status" class="status">Scope</div>
-          <h3 id="stage-title">Frame the question</h3><p id="stage-description" class="description">The workflow preserves the question and constraints, then identifies missing facts that could change the answer.</p>
-          <div class="boundary"><strong id="stage-note-title">What this means</strong><span id="stage-note">This step is agent guidance; it does not mechanically enforce every research choice.</span></div>
+          <h3 id="stage-title">Frame the question</h3><p id="stage-description" class="description">Start with the question and the decision it needs to support. Identify the unknowns that will shape the investigation.</p>
+          <div class="boundary"><strong id="stage-note-title">Why it helps</strong><span id="stage-note">A broad enquiry gets a clear starting point while the user's actual question stays in view.</span></div>
           <div class="controls" aria-label="Animation controls">
-            <button id="previous" type="button" aria-label="Previous step">Previous</button><button id="play" class="primary" type="button" aria-label="Play animation">Play</button><button id="next" type="button" aria-label="Next step">Next</button><button id="reset" type="button" aria-label="Reset to first step">Reset</button><button id="change" class="change" type="button" aria-label="Demonstrate changed evidence invalidating review">Change evidence → invalidate review</button>
+            <button id="previous" type="button" aria-label="Previous step">Previous</button><button id="play" class="primary" type="button" aria-label="Play animation">Play</button><button id="next" type="button" aria-label="Next step">Next</button><button id="reset" type="button" aria-label="Reset to first step">Reset</button><button id="change" class="change" type="button" aria-label="Demonstrate changed evidence invalidating review">Change the evidence</button>
           </div>
         </div>
       </div>
-      <div class="note"><p><strong>Reading this circuit:</strong> a passed check means the saved records and recorded review agree. The separate reviewer judges meaning and omissions; source identity and reviewer identity are not authenticated by the code. The optional Stop hook cannot retract text already generated.</p><nav class="links" aria-label="Related files"><a href="architecture.svg">Static SVG</a><a href="architecture.md">Source map</a></nav></div>
+      <div class="note"><p>A citation can remain unchanged after its evidence changes. This circuit binds the review to the captured evidence and draft, so later edits cannot inherit stale clearance. The public suite has 59 offline tests; an earlier live enquiry linked 49 claims to 62 artifacts. <a href="https://github.com/drparhamahmadian-crypto/deep-research-circuit/blob/main/docs/design-comparison.md">Why the design works</a> · <a href="https://github.com/drparhamahmadian-crypto/deep-research-circuit/blob/main/docs/development-evaluation.md">Development results</a> · <a href="https://github.com/drparhamahmadian-crypto/deep-research-circuit/blob/main/docs/validation-notes.md">Validation notes</a></p><nav class="links" aria-label="Related files"><a href="architecture.svg">Static SVG</a><a href="architecture.md">Source map</a></nav></div>
     </section>
   </main>
   <script>
     (() => {
       const stages = [
-        {status:'Scope',title:'Frame the question',description:'The workflow preserves the question and constraints, then identifies missing facts that could change the answer.',note:'This step is agent guidance; it does not mechanically enforce every research choice.',nodes:['scope'],edges:[]},
-        {status:'Optional control',title:'Track strong leads',description:'Research uses available tools. When the Codex hook is loaded, trusted and invoked, it meters covered calls and records decision-changing leads and bounded extensions.',note:'Covered calls are counted; this is not a universal query, token or spending meter.',nodes:['retrieve','hook'],edges:['scope-retrieve','hook-retrieve']},
-        {status:'Capture',title:'Save the source return',description:'Recovered source text becomes an artifact with a declared locator, observation time, retrieval status and SHA-256 fingerprint.',note:'Empty or failed returns cannot clear a supported claim. Declared metadata is not authenticated.',nodes:['artifact'],edges:['retrieve-artifact']},
-        {status:'Bind',title:'Bind claims to evidence',description:'The marked report and source artifact feed claims.json: claim IDs, exact text, source locators, quotations, statuses and file hashes.',note:'The reviewer still checks consequential prose outside the marked claim lines.',nodes:['report','ledger'],edges:['artifact-ledger','report-ledger']},
-        {status:'Judgment',title:'Review meaning and omissions',description:'A separate reviewer examines the full draft and original evidence, then records coverage, verdicts and reasons in review.json.',note:'Recorded reviewer IDs differ; actual independence and semantic support need genuine assessment.',nodes:['review'],edges:['ledger-review']},
-        {status:'Local clearance',title:'Check, then render',description:'validate_claims.py checks local records and the hash-bound review. A pass enables render, which removes claim markers. The optional Stop hook also compares a frozen render with final generated text.',note:'A pass establishes record consistency, not factual truth or live availability.',nodes:['check','reader'],valid:['check','reader'],edges:['ledger-check','review-check','hook-check','check-reader']},
-        {status:'Review invalidated',title:'Changed evidence breaks the binding',description:'Change a report, manifest or artifact and its recorded fingerprint no longer matches. The earlier review cannot clear this version until the affected claims and coverage are reassessed.',note:'Render stays blocked on failed checks. Stop can report failure but cannot retract text already generated.',nodes:['artifact','ledger','review','check'],invalid:['artifact','ledger','review','check'],edges:['artifact-ledger','ledger-review','review-check','check-reader']}
+        {status:'Scope',title:'Frame the question',description:'Start with the question and the decision it needs to support. Identify the unknowns that will shape the investigation.',note:'A broad enquiry gets a clear starting point while the user\'s actual question stays in view.',nodes:['scope'],edges:[]},
+        {status:'Research control',title:'Follow useful leads',description:'Record promising sources and their next checks. With the optional guard active, covered calls and bounded extensions stay in the research ledger.',note:'An extension adds capacity without resetting the work already counted. Unresolved leads keep their recorded history.',nodes:['retrieve','hook'],edges:['scope-retrieve','hook-retrieve']},
+        {status:'Capture',title:'Keep the evidence',description:'Save recovered source text with its location, observation time, retrieval status and SHA-256 fingerprint.',note:'Later claims and reviews can refer to the captured passage. Failed or empty returns stay distinct from usable evidence.',nodes:['artifact'],edges:['retrieve-artifact']},
+        {status:'Bind',title:'Connect claims to sources',description:'claims.json connects marked report claims to source text, quotations and file fingerprints.',note:'The evidence trail identifies both the supporting passage and the exact draft version being reviewed.',nodes:['report','ledger'],edges:['artifact-ledger','report-ledger']},
+        {status:'Review',title:'Challenge the answer',description:'A separate reviewer reads the complete draft and original evidence, checks meaning and missing alternatives, and records the outcome in review.json.',note:'Review is an explicit assignment with recorded reasons. It can correct the answer before delivery.',nodes:['review'],edges:['ledger-review']},
+        {status:'Delivery',title:'Deliver the reviewed version',description:'validate_claims.py brings the draft, evidence and recorded review together. After a successful check, render produces the reader\'s report. The optional Stop audit checks final-text agreement.',note:'The version that reaches the reader stays tied to the material recorded in the review.',nodes:['check','reader'],valid:['check','reader'],edges:['ledger-check','review-check','hook-check','check-reader']},
+        {status:'Reassessment',title:'Keep review current',description:'An edit to the report, manifest or evidence changes its fingerprint. The checker holds rendering until the affected bindings and review are updated.',note:'Changed material cannot reuse an older clearance. Try this step to see the dependency checks work.',nodes:['artifact','ledger','review','check'],invalid:['artifact','ledger','review','check'],edges:['artifact-ledger','ledger-review','review-check','check-reader']}
       ];
       const byId=id=>document.getElementById(id);
       const controls={previous:byId('previous'),play:byId('play'),next:byId('next'),reset:byId('reset'),change:byId('change')};
