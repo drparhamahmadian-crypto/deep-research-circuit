@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-03",
+  "version": "0.2.0",
+  "license": "Apache-2.0; bundled font OFL-1.1",
+  "scope": "Public prototype source, synthetic tests and architecture assets. Runtime research data and private application material excluded.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "645fc6c51c24da0394e51c980b6f73c52e82d1b481a653d0913aa49502dea26a"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "16f7c9164856e3e33607a08c71db69942f5a42855732d29e3b33d81060427ce4"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "sha256": "390399b288d526a855bd93ce2b69769eb8e1a0bba83b4218f403501f055b9bb6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "09a1ddda290208ad679a91e9913c42a6ec765153a1d9cdd133275e0393efe7f0"
+    },
+    {
+      "path": "docs/architecture/architecture.md",
+      "sha256": "d7146da3f0616057b8c49937e746b07e8b3c7dabf264531665943a13cbf78053"
+    },
+    {
+      "path": "docs/architecture/architecture.mmd",
+      "sha256": "44e15276b6ec61eee7692c557e8497592ecbcffc8ae5569d2ca300891f941a06"
+    },
+    {
+      "path": "docs/architecture/architecture.svg",
+      "sha256": "381423f32fa55fe58252615a83bed7b4ce82e2e638935cb834ab1141dd8e0d12"
+    },
+    {
+      "path": "docs/architecture/assets/fonts/ChakraPetch-SemiBold-Latin.woff2",
+      "sha256": "4d6d5f0b31b3a471a843779c4ecada040e5bc291f96bca9805a94293fe8003fa"
+    },
+    {
+      "path": "docs/architecture/assets/fonts/OFL.txt",
+      "sha256": "13831d02389d917d22fcfa6c79f98f8acbf61d230add0e73a4d4dc5f3bfb9e56"
+    },
+    {
+      "path": "docs/architecture/brand-guidelines.md",
+      "sha256": "813c1ed2a919956779b838df3479a97991d7a67cb68702c2033afd7fddb9c653"
+    },
+    {
+      "path": "docs/architecture/index.html",
+      "sha256": "26e9d8333c1ac92f9bb10a3996af240c10933cc22f05d6b44cbc7f6da1c09060"
+    },
+    {
+      "path": "docs/ci/offline-checks.yml",
+      "sha256": "32703d19bdd678b856a19c173938218a35bc71c1e60f9d49a36e3f993679546d"
+    },
+    {
+      "path": "examples/synthetic/catalog-capture.txt",
+      "sha256": "1551306eb6fd1fa59f73584cb717b2d58856a1c63ca42ccf94f3fc6380dff6e8"
+    },
+    {
+      "path": "examples/synthetic/claims.json",
+      "sha256": "f3aacfa3f6add57c53504ee2f0d97b14cb5bdfe25ec3433ad123ab679ab6646e"
+    },
+    {
+      "path": "examples/synthetic/report.md",
+      "sha256": "08775fe3a3c9baaa071b26b8aef3f8743e766c12f81f7f0b6eb4b1d1dafa0fa0"
+    },
+    {
+      "path": "examples/synthetic/review.synthetic.json",
+      "sha256": "8529f2351d44725d500af229323e806cdc760209dd190a507db4c94f33ed3ede"
+    },
+    {
+      "path": "hooks/guard.py",
+      "sha256": "c4a123197ecf8ddaad5b4505febb1a512b177e8fe756764235c0e006d0ccd3da"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "sha256": "5ee91e0f6078de9c37684a1a1823a0389ff0d13e590caa5c4d498cab5955a431"
+    },
+    {
+      "path": "hooks/research_control.py",
+      "sha256": "8bd6b3ccc01fea9fa7cedf653a16d31db90012c25b1b6127147269a94530fa46"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "e1614e36ed29a83719cd2f05e3cff2c108dfdfbc9037ba8562cb787ee9d6b083"
+    },
+    {
+      "path": "plugin.with-hooks.example.json",
+      "sha256": "0af167f3fc8e91308761f5db8dcb4859e168c85256c9d0b6929f301e253ddf0f"
+    },
+    {
+      "path": "skills/deep-research-circuit/SKILL.md",
+      "sha256": "3a2cb1af516941e217d07deb8013475f55cf5bfa0dc4c88c8c8cc6da51d53711"
+    },
+    {
+      "path": "skills/deep-research-circuit/agents/openai.yaml",
+      "sha256": "61a06188ed9e1744740ad3afc91bb41395a02ea73aa978bb5691a5c1bb141316"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/automatic-guard.md",
+      "sha256": "880bcd0127e676ba80d93c3fe5e6a6ca9318884017c2d6ed9a717147fb356977"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/business-and-forecasts.md",
+      "sha256": "5e92e37ac5294b4247bfad828a54574477530d04406bd9ea5f16529f8fe7a3c3"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/calculation-pass.md",
+      "sha256": "a67ac974152be97612f31c8fcc6a38b3c6168141d9fd3a63d1d4af4aba49a81e"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/claim-validation.md",
+      "sha256": "f098f45baa29db83cb32f3f935ce2eaf1ea02e5ee13c8ce9ef34292110b13849"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/document-recovery.md",
+      "sha256": "345e5eae38a479a5cc186043dc1cdd0b604b51f69723a5e9d7df5f2cecc38f3b"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/general-enquiries.md",
+      "sha256": "d6892e3aaf3db0e99ad0030cb91c0071749fc911a74b88bddf376c2cf4b4181f"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/history.md",
+      "sha256": "bb92f22899e87f1c28436c6410e1b86c1c4df013fef6e71ae57b5b265168391b"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/law-and-policy.md",
+      "sha256": "6081d287bc8527dbece0abd7775272b36cefb3a0b787bf087302186b968284b0"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/legal-disputes.md",
+      "sha256": "cdd4d55afea3a956c1dbaa1f2130aca78df683cc291e39041f5a928b475261b7"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/products-and-deals.md",
+      "sha256": "5a12e52bd9ae48e02042c254c3161183004bb98ac2c8c695779b63d2b171e51b"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/property-decisions.md",
+      "sha256": "90a1f0aa602e933ae93df059ee3cadcf8270b379120cd11426eda16d23611edc"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/repos-and-tools.md",
+      "sha256": "77c37a85f5c49b656e06c7cc907ba7fe73efd925bd198bc5ff3812d37f47a4d4"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/roles.md",
+      "sha256": "32cec55ab7ff75a1a00e0897510a7add1d82860fd73ece611cda0b031b74adbc"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/science.md",
+      "sha256": "dcae55fddd8529db92bf818060f3417f7f50d202d8b77b3654b9a4ce772e34f4"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/search-extensions.md",
+      "sha256": "521a38bdfb69b89a53dcc58c865cb9203026bc3d46b195ca3b73e3da25fb01b1"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/source-coverage.md",
+      "sha256": "02356a3dd7691209f2dbb3487de404610aaa75c6e7007de7219db75942a16ab7"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/status-propagation.md",
+      "sha256": "c0a7cf3edeabad0b5a2d15416b11f4dd24b0ab6ec7eab7a9e39b46508b4640f1"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/travel-decisions.md",
+      "sha256": "1278d967060e07827f0c66c0b23a4d85c31af4f0cd23425b030e7248e2928993"
+    },
+    {
+      "path": "skills/deep-research-circuit/references/workflow-maintenance.md",
+      "sha256": "4e56f07469ecd3d237806676b0d6668d9a276a0a5dfd23036e49f0f33a1e29c3"
+    },
+    {
+      "path": "skills/deep-research-circuit/scripts/validate_claims.py",
+      "sha256": "a372f08c77d207fadddac8919f2d7354c74919f0c09ca457c3d49df0a2b75064"
+    },
+    {
+      "path": "source-sha256.txt",
+      "sha256": "d418ed06fef61af26be13e67fdc1f9c043af83438a8f4c9c4ee7ac54199b5975"
+    },
+    {
+      "path": "tests/fixtures/catalog-capture.txt",
+      "sha256": "167e6ec84da5ec618c2ddfb488b3eab37673df698a8fb0b56ed8c86d414a92e1"
+    },
+    {
+      "path": "tests/fixtures/empty-seller-browser.json",
+      "sha256": "88842291a5d59715a423a4a1a4b73d385453a2faa67b5aab6e6be1623b082f0c"
+    },
+    {
+      "path": "tests/fixtures/empty-seller-crawl.json",
+      "sha256": "1a87262661487e5ebad004749d0fd9e8fb597ee64bff6db015cfe49c8ea93ae6"
+    },
+    {
+      "path": "tests/test_claim_validator.py",
+      "sha256": "dfa59f23962c1d28111f5096b07ce04714f1a3b4c11ef803fd574b3feaf5b673"
+    },
+    {
+      "path": "tests/test_research_guard.py",
+      "sha256": "a674e22bc9a1347786a68822ce03334a8117a74439e841878913aa24343d257f"
+    },
+    {
+      "path": "tests/test_search_extensions.py",
+      "sha256": "5389b911d9985ebe81bc4b0c77601c015ed1328449394fda1c09586778b2d78a"
+    },
+    {
+      "path": "verification.json",
+      "sha256": "8dffeb5a4bc01774e88112fc5c65b73839e83b8fc822cf1cf82abd075e2b0cb8"
+    }
+  ]
+}

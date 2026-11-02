@@ -1,0 +1,4 @@
+Synthetic catalog capture for automated tests.
+Product: Widget-42
+Displayed price: $10.00
+Delivery: not shown

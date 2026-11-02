@@ -1,0 +1,40 @@
+%%{init: {"theme":"base","themeVariables":{"background":"#07141f","primaryColor":"#102a3d","primaryTextColor":"#f8fcff","lineColor":"#83d5f4","fontFamily":"Avenir, Arial, sans-serif"}}}%%
+flowchart LR
+  U[Human question and constraints] --> W[Research workflow<br/>scope and decisive unknowns]
+  W --> T[Retrieval through available tools]
+  T --> E[Saved source record<br/>locator, time, status, text artifact]
+  E --> M[claims.json<br/>source and citation ledger]
+  D[Marked report.md<br/>claim IDs and exact text] --> M
+  M --> V[validate_claims.py<br/>mechanical record checks]
+  E --> V
+  D --> V
+  V -->|record errors| F[Correct evidence or qualify claim]
+  F --> M
+  V -->|prepared records| R[Separate reviewer<br/>meaning, omissions, uncertainty]
+  R -->|verdicts bound to report and manifest hashes| J[review.json]
+  J --> C[check]
+  M --> C
+  E --> C
+  D --> C
+  C -->|pass| O[render<br/>remove claim markers]
+  C -->|fail or changed bytes| F
+  O --> A[Report for reader<br/>with stated limits]
+
+  subgraph G[Optional Codex guard when loaded, trusted and activated]
+    P[PreToolUse<br/>covered-call allowance] --> L[Lead and extension ledger<br/>coordinator decisions]
+    L --> S[research-scope.json<br/>closure and lead dispositions]
+    S --> M
+    H[Stop audit<br/>frozen snapshot and text match] --> C
+    O --> H
+  end
+  W -. guard mode .-> P
+  H -. cleared or NOT CLEARED<br/>cannot retract generated text .-> A
+
+  classDef human fill:#102a3d,stroke:#83d5f4,color:#f8fcff
+  classDef evidence fill:#132f43,stroke:#679bb2,color:#f8fcff
+  classDef check fill:#123d42,stroke:#63dfcf,color:#f8fcff
+  classDef caveat fill:#44302e,stroke:#ffae78,color:#f8fcff
+  class U,R,A human
+  class T,E,M,D,J,S evidence
+  class V,C,O,P,L,H check
+  class F caveat

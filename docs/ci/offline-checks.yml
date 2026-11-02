@@ -1,0 +1,26 @@
+name: Offline checks
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.9', '3.15']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Run offline tests
+        run: python -B -m unittest discover -s tests -v
+      - name: Check synthetic evidence records
+        run: python -B skills/deep-research-circuit/scripts/validate_claims.py check examples/synthetic/claims.json --review examples/synthetic/review.synthetic.json
+      - name: Render synthetic report
+        run: python -B skills/deep-research-circuit/scripts/validate_claims.py render examples/synthetic/claims.json --review examples/synthetic/review.synthetic.json

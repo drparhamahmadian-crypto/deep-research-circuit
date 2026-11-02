@@ -1,0 +1,15 @@
+# Products and shopping discounts
+
+Use for product selection, retailer comparisons, offers and stock enquiries. Choose any available shopping procedure only after reading its description and checking that it covers this task. A sales/prospecting workflow is a different route.
+
+Keep every hard constraint: exact variant, size, compatibility, condition, budget, delivery region and exclusions. Distinguish a manufacturer's specification or compatibility statement from a seller's assertion and an independent performance test. Compare like variants; identify sponsorship, affiliate incentives and copied reviews when material.
+
+Use the currency and delivery location requested or relevant to the user; mark them unknown when not established. Preserve colour, material and visual preferences as well as technical specifications. Infer likely needs as stated assumptions; ask briefly if an unknown would change the shortlist. A similar product with a different colour, size or specification is an alternative, not an exact match.
+
+Open the actual offer. Check price, currency, stock for the required variant, seller identity, delivery eligibility/cost, membership or coupon conditions, warranty and returns where they affect the choice. Give the checked date. Search snippets and a product-family page do not establish current stock or delivered price. Do not present an unconfirmed item as satisfying a confirmed-stock requirement.
+
+For a discount claim, distinguish an advertised saving against a reference price from evidence of a reduction in the actual recent selling price. Missing price history limits the saving claim; it does not disqualify an otherwise eligible offer unless a verified discount is itself a hard requirement. Do not invent history or substitute a neighbouring variant. For a significant purchase, challenge the shortlist against the user's constraints and a credible alternative before recommending. If nothing qualifies, say so.
+
+Compare delivered totals, including mandatory fees, shipping and applicable discounts; unknown shipping means the delivered total is unknown. Include relevant open-box, packaging-damaged or refurbished offers when the requested condition permits; distinguish packaging damage from product defects, and verify warranty/returns. Do not silently exclude an eligible bargain or relax a new-only requirement.
+
+For every recommended product, show a genuine product image inline in the chat, with the product name, exact variant, direct offer link, price, delivery cost, stock and checked date beside it. Use an available native image attachment or a permitted Markdown image embed; a click-to-view link alone does not meet this requirement. Verify that the image depicts the stated variant; do not generate a substitute or present another colour as the exact match. If the current surface cannot display an image or no verified image is obtainable, say so and label that item an incomplete lead rather than a fully presented recommendation. Do not download remote media to bypass display restrictions.

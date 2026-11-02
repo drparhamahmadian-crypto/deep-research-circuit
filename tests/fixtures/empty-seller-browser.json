@@ -1,0 +1,14 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"status\":200,\"content\":[\"\",\"\"],\"url\":\"https://seller.example/products/ITEM-42\"}"
+    }
+  ],
+  "structuredContent": {
+    "status": 200,
+    "content": ["", ""],
+    "url": "https://seller.example/products/ITEM-42"
+  },
+  "isError": false
+}

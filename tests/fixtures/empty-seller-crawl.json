@@ -1,0 +1,12 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "# https://seller.example/products/ITEM-42\n\n"
+    }
+  ],
+  "structuredContent": {
+    "result": "# https://seller.example/products/ITEM-42\n\n"
+  },
+  "isError": false
+}

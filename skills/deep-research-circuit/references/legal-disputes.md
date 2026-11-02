@@ -1,0 +1,7 @@
+# Contested legal questions
+
+Use for a contested claim, notice, remedy or review strategy. Establish jurisdiction, forum, material dates, procedural stage, each side's position and the outcome sought. Identify claims, defences, exceptions and burdens from controlling local authority. Map decisive elements to supporting and contradictory evidence with document or paragraph references; distinguish reported facts, verified material and inference. Identify the strongest countercase and the missing evidence that could change the result. An evidence gap alone does not establish failure on the merits.
+
+Distinguish a pre-emptive challenge, defence at hearing, appeal and stay. Verify the applicable trigger and deadline before calculating a personal date. Use [law-and-policy.md](law-and-policy.md) for operative provisions. Search later judgments and read how they treat the specific proposition relied on; citation lists and summary labels do not establish current authority. Record incomplete coverage.
+
+Method inspiration: [Anthropic's claim-chart skill](https://github.com/anthropics/claude-for-legal/blob/4a6c651889c97cc9140580363c73e0eb17379c2b/litigation-legal/skills/claim-chart/SKILL.md), licensed under Apache-2.0. Adapted and rewritten for Deep Research Circuit; no upstream code is included. Procedural and treatment checks require current sources from the applicable jurisdiction. Accuracy gains are untested.

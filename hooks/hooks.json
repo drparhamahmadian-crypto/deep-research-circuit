@@ -1,0 +1,10 @@
+{
+  "description": "Explicit research runs only: covered-call allowance and automatic final validation. Not a universal sandbox or final-output filter.",
+  "hooks": {
+    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "python3 \"${PLUGIN_ROOT}/hooks/guard.py\"", "timeout": 25, "additionalContextLimit": 600}]}],
+    "PreToolUse": [{"hooks": [{"type": "command", "command": "python3 \"${PLUGIN_ROOT}/hooks/guard.py\"", "timeout": 25}]}],
+    "SessionStart": [{"hooks": [{"type": "command", "command": "python3 \"${PLUGIN_ROOT}/hooks/guard.py\"", "timeout": 25, "additionalContextLimit": 600}]}],
+    "SubagentStart": [{"hooks": [{"type": "command", "command": "python3 \"${PLUGIN_ROOT}/hooks/guard.py\"", "timeout": 25, "additionalContextLimit": 600}]}],
+    "Stop": [{"hooks": [{"type": "command", "command": "python3 \"${PLUGIN_ROOT}/hooks/guard.py\"", "timeout": 25}]}]
+  }
+}

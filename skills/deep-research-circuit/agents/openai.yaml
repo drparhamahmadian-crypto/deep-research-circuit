@@ -1,0 +1,6 @@
+interface:
+  display_name: "Deep Research Circuit"
+  short_description: "General research with selective skills and review"
+  default_prompt: "Use $deep-research-circuit to investigate this question, choose the necessary methods and give a concise cited answer."
+policy:
+  allow_implicit_invocation: false

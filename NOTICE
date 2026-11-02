@@ -1,0 +1,19 @@
+Deep Research Circuit
+Copyright 2026 drparhamahmadian-crypto and contributors
+
+Developed with AI assistance from the local Parham Deep Research 0.2.0 project.
+See PROVENANCE.md for the source snapshot, adaptations and method credits.
+
+Method-reference documents credit Anthropic's claude-for-legal, licensed
+under Apache-2.0. Those documents have been adapted and rewritten for this
+project. No upstream implementation files are bundled.
+
+Deep Research Circuit is an independent project and is not affiliated with
+or endorsed by Anthropic PBC, OpenAI or the projects cited in its documentation.
+Product names identify referenced methods and platforms only.
+
+The architecture figure bundles Chakra Petch, copyright 2018 The Chakra
+Petch Project Authors, under the SIL Open Font License 1.1. Its licence
+and source information are retained in docs/architecture/assets/fonts/OFL.txt
+and docs/architecture/brand-guidelines.md. The project licence does not
+replace the font's licence.

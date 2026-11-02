@@ -1,0 +1,7 @@
+# Legal and policy status
+
+Use when a claim concerns an operative requirement or policy position. Establish jurisdiction, relevant date, authoritative issuer and document type. Distinguish a proposal, announcement, guidance, enacted provision and commenced requirement. Check material amendments, commencement, transition and exceptions in the authoritative record. An enactment or publication date alone does not establish operation.
+
+Use the relevant jurisdiction's sources; do not apply one regulator's or country's guidance universally. Distinguish legal force from evidence that a policy works. Use scientific appraisal for a policy's empirical effects only when needed. State a material status/access uncertainty rather than asserting the rule is current.
+
+Identify the applicable national, federal, state/provincial, regional and local jurisdiction, including supranational rules where relevant. Start with official legislation registers, court/tribunal decisions and procedural rules, regulators and responsible local authorities. Secondary repositories can help discovery; verify the relied-on text, version and later treatment against authoritative records. Professional regulation, tenancy and local-government disputes require their own controlling regime. Link the precise provision, judgment paragraph or official procedural page used. Do not calculate a deadline from a publication date when its legal trigger is service or another event.

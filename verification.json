@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-03",
+  "python": "3.15.2",
+  "checks": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tests python -m unittest test_research_guard.ResearchGuardTests.test_package_directory_and_descendants_cannot_be_study_roots",
+      "result": "pass",
+      "tests_run": 1,
+      "scope": "Simulated activation with a temporary package copy; checks package root, descendant and symlinked descendant."
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests",
+      "result": "pass",
+      "tests_run": 59,
+      "scope": "Offline validator, guard and extension tests with synthetic records and temporary state."
+    }
+  ],
+  "limits": [
+    "Python 3.9 has not been tested.",
+    "No live host hooks, installation, model/provider calls, or research quality comparison were tested.",
+    "Synthetic reviewer attestations do not demonstrate semantic verification or independent review."
+  ]
+}

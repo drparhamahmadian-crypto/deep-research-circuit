@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "producer_id": "synthetic-producer",
+  "report": {
+    "path": "report.md",
+    "sha256": "08775fe3a3c9baaa071b26b8aef3f8743e766c12f81f7f0b6eb4b1d1dafa0fa0"
+  },
+  "sources": [
+    {
+      "id": "catalog",
+      "locator": "https://catalog.example/search/ITEM-42",
+      "origin": "constructed",
+      "role": "aggregator",
+      "observed_at": "2026-01-15T19:31:44+11:00",
+      "retrieval_status": "recovered",
+      "content_kind": "rendered_text",
+      "format": "plain_text",
+      "artifact": "catalog-capture.txt",
+      "sha256": "1551306eb6fd1fa59f73584cb717b2d58856a1c63ca42ccf94f3fc6380dff6e8"
+    }
+  ],
+  "claims": [
+    {
+      "id": "price",
+      "text": "Synthetic example: On 2026-01-15, Sample Catalog displayed $10.00 for Widget-42; delivery terms remained unverified.",
+      "status": "historical",
+      "as_of": "2026-01-15",
+      "citations": [
+        {
+          "source_id": "catalog",
+          "locator": "https://catalog.example/search/ITEM-42",
+          "quote": "$10.00",
+          "expected_role": "aggregator"
+        }
+      ]
+    }
+  ]
+}

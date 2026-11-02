@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "deep-research-circuit",
+  "version": "0.2.0",
+  "license": "Apache-2.0",
+  "description": "Evidence-led research workflow with hash-bound claim review and opt-in completion safeguards."
+}

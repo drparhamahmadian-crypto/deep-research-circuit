@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "reviewer_id": "synthetic-test-reviewer",
+  "manifest_sha256": "f3aacfa3f6add57c53504ee2f0d97b14cb5bdfe25ec3433ad123ab679ab6646e",
+  "report_sha256": "08775fe3a3c9baaa071b26b8aef3f8743e766c12f81f7f0b6eb4b1d1dafa0fa0",
+  "coverage_complete": true,
+  "claims": [
+    {
+      "id": "price",
+      "verdict": "supported",
+      "reason": "Synthetic example only; no independent semantic review occurred."
+    }
+  ]
+}
